@@ -1,0 +1,107 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import 'bootstrap';
+
+.container {
+  background-color:#E0FFFF;
+}
+
+ .image-filed {
+  width: 100%;
+  height: auto;
+ }
+
+ .admin_sign_in {
+  margin-left: 740px;
+ }
+
+ .user-search_form-inline {
+  margin-left: 370px;
+ }
+
+.admin-search_form-inline {
+  margin-left: 290px;
+ }
+
+.category-title {
+  color:#660099;
+}
+
+.table {
+  table-layout: fixed;
+}
+
+.table th,td {
+  overflow-wrap: break-word;
+}
+
+.user_image_td {
+	position: relative;
+}
+
+.user_image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+.user-table {
+    border:1px solid #0000EE;
+}
+
+.user-table > thead > tr > th, .user-table > tbody > tr > th, .user-table > tbody > tr > td {
+    border:1px solid #0000EE;
+}
+
+.notice-table {
+    border:1px solid #00BB00;
+}
+
+.notice-table > thead > tr > th, .notice-table > tbody > tr > th, .notice-table > tbody > tr > td {
+    border-top:1px solid #00BB00;
+    border-bottom:1px solid #00BB00;
+}
+
+.appliance-table {
+    border:1px solid #FFBF00;
+}
+
+.appliance-table > thead > tr > th, .appliance-table > tbody > tr > th, .appliance-table > tbody > tr > td {
+    border:1px solid #FFBF00;
+}
+
+.category-table {
+    border:1px solid #4000FF;
+}
+
+.category-table > thead > tr > th, .category-table > tbody > tr > th, .category-table > tbody > tr > td {
+    border:1px solid #4000FF;
+}
+
+.category-table > thead {
+    background-color:#CDA9FB;
+}
+
+.category-border {
+  border-bottom:1px solid #4B4BFD;
+}
