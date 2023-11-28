@@ -1,0 +1,31 @@
+<% if admin_signed_in? %>
+
+  <div class='pt-2 border-bottom text-center bg-warning rounded'>
+    <h4 class='category-title'>カテゴリ</h4>
+  </div>
+
+  <div class='mb-5 list-group'>
+    <% categories.each do |category| %>
+      <%= link_to ({controller: 'admins/electronics', action: 'index', id: category.id }) do %>
+      <div class='list-group-item list-group-item-warning text-primary'><%= category.category_name %></div>
+      <% end %>
+    <% end %>
+  </div>
+
+<% else %>
+
+  <%= link_to '新規投稿', new_appliance_path, class:'my-4 btn btn-success btn-block' %>
+
+  <div class='pt-2 border-bottom bg-warning text-center rounded'>
+    <h4 class='category-title'>カテゴリ</h4>
+  </div>
+
+  <div class='mb-5 list-group'>
+    <% categories.each do |category| %>
+      <%= link_to ({controller: 'users/electronics', action: 'index', id: category.id }) do %>
+      <div class='list-group-item list-group-item-warning text-primary'><%= category.category_name %></div>
+      <% end %>
+    <% end %>
+  </div>
+
+<% end %>

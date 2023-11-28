@@ -1,0 +1,13 @@
+<div class='container'>
+	<h1 class='pt-4 border-bottom border-info'>検索結果</h1><br>
+
+    <% if @electronics_or_user == '1' %>
+    <h2 class='mb-4 border-bottom border-warning text-center'>家電情報一覧</h2>
+    <%= render 'admins/electronics/list', electronics:@electronics %><br>
+
+    <% else @electronics_or_user == '2' %>
+    <h2 class='mb-4 border-bottom border-primary text-center'>ユーザー検索一覧</h2>
+    <%= render 'admins/users/list', users:@users %><br>
+    <% end %>
+
+</div>

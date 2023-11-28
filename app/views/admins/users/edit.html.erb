@@ -1,0 +1,11 @@
+<div class='container'>
+	<h1 class='pt-4 border-bottom border-primary'>ユーザー情報編集</h1>
+  <div class='row'>
+    <div class='col-10 offset-1'>
+      <%= form_for(@user, url: admins_user_path) do |f| %>
+      <%= render 'layouts/error_messages', obj:@user %>
+      <%= render 'users/users/form', user:@user, f:f %><br>
+      <% end %>
+    </div>
+  </div>
+</div>

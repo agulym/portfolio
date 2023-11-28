@@ -1,0 +1,11 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-10 offset-1'>
+      <h1 class='mt-3 border-bottom border-warning'>家電情報編集</h1>
+      <%= form_for(@electronics, url: admins_electronics_path) do |f| %>
+      <%= render 'layouts/error_messages', obj:@electronics %>
+      <%= render 'users/electronics/form', electronics:@electronics, f:f %>
+      <% end %>
+    </div>
+  </div>
+</div>

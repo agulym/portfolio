@@ -1,0 +1,17 @@
+<div class='my-3 field'>
+  <%= f.label :タイトル, class: 'col-3 text-center' %>
+  <%= f.text_field :title, class: 'col-8 title' %>
+</div>
+
+<div class='my-3 field'>
+  <%= f.label :内容, class: 'col-3 text-center align-top' %>
+  <%= f.text_area :text, class: 'col-8 text' %>
+</div>
+
+<div class='actions'>
+  <% if notice == @notice_new  %>
+    <%= f.submit '通知', class:'col-8 offset-3 btn btn-success btn-block' %>
+  <% else %>
+    <%= f.submit '変更', class:'col-8 offset-3 btn btn-success btn-block' %>
+  <% end %>
+</div>

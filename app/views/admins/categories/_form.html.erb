@@ -1,0 +1,17 @@
+<div class='my-3 field'>
+  <%= f.label :カテゴリ名, class: 'col-4 text-center' %>
+  <%= f.text_field :category_name, class: 'col-4 category' %>
+</div>
+
+<div class='my-3 field'>
+  <%= f.label :有効寿命設定月数, class: 'col-4 text-center' %>
+  <%= f.number_field:effective_life, class: 'col-4 effective_life' %>
+</div>
+
+<div class='actions'>
+  <% if category == @category_new  %>
+	  <%= f.submit '新規投稿', class:'col-4 offset-4 btn btn-success btn-block' %>
+  <% else %>
+    <%= f.submit '更新', class:'col-4 offset-4 btn btn-success btn-block' %>
+  <% end %>
+</div>

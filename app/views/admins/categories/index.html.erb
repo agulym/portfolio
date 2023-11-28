@@ -1,0 +1,35 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-8 offset-2'>
+    <h1 class='my-4 category-border' >カテゴリ登録・一覧</h1>
+
+    <%= form_for(@category_new, url:admins_categories_path) do |f| %>
+    <%= render 'layouts/error_messages', obj:@category_new %>
+    <%= render 'form', category:@category_new, f:f %>
+    <% end %>
+
+    <h2 class='my-4 category-border'>カテゴリ一覧</h2>
+    <table class='mb-5 table category-table'>
+      <thead>
+        <tr>
+          <th style='width: 52%'>カテゴリ名</th>
+	        <th class='text-center' style='width: 25%'>有効寿命設定月数</th>
+	        <th class='text-center' style='width: 23%' colspan='1'>編集 / 削除</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @categories.each do |category| %>
+        <tr>
+        	<th><%= category.category_name %></th>
+          <td class='text-center'><%= category.effective_life %></td>
+          <td>
+            <%= link_to '編集',edit_admins_category_path(category.id), class:'mx-1 btn btn-outline-primary' %>
+            <%= link_to '削除',admins_category_path(category.id), method: :delete, class:'mx-1 btn btn-outline-danger' %>
+          </td>
+        </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

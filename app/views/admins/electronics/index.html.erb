@@ -1,0 +1,15 @@
+<div class='container'>
+	<h1 class='pt-4 border-bottom border-warning'>家電情報一覧</h1><br>
+  <div class='row'>
+
+    <div class='col-4'>
+     <%= render 'admins/categories/list', categories:@categories %>
+    </div>
+
+    <div class='col-8'>
+      <h2 class='mb-4 border-bottom border-warning text-center'>家電情報一覧</h2>
+      <%= render 'list', electronics:@electronics %>
+    </div>
+
+  </div>
+</div>

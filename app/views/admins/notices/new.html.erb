@@ -1,0 +1,18 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-10 offset-1'>
+      <h1 class='my-4 border-bottom border-primary'>管理者トップ画面</h1>
+
+      <h2 class='mb-4 border-bottom border-success'>お知らせ作成</h2>
+
+      <%= form_for(@notice_new, url: admins_notices_path) do |f| %>
+      <%= render 'layouts/error_messages', obj:@notice_new %>
+      <%= render 'form', notice:@notice_new, f:f %><br>
+      <% end %>
+
+      <h3 class='mt-2 text-center' >ユーザー数: <%= @users.count %>人</h3>
+      <h3 class='my-4 text-center'>家電情報数: <%= @electronics.count %>件</h3>
+      <h3 class='mb-5 text-center'>カテゴリ数: <%= @categories.count %>個</h3>
+    </div>
+  </div>
+</div>

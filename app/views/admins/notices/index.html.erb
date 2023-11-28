@@ -1,0 +1,9 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-10 offset-1'>
+      <%= link_to 'お知らせ作成', admins_top_path, class:'mt-4 btn btn-success btn-block' %>
+      <h1 class='my-4 border-bottom border-success'>お知らせ一覧</h1>
+      <%= render 'list', notices:@notices %>
+    </div>
+  </div>
+</div>

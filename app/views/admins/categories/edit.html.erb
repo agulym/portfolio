@@ -1,0 +1,11 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-8 offset-2'>
+    <h1 class='my-4 category-border'>カテゴリ編集</h1>
+    <%= form_for(@category, url:admins_category_path) do |f| %>
+    <%= render 'layouts/error_messages', obj:@category %>
+    <%= render 'form', category:@category, f:f %><br>
+    <% end %>
+    </div>
+  </div>
+</div>

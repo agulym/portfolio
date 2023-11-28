@@ -1,0 +1,11 @@
+<div class='container'>
+	<h1 class='pt-4 border-bottom border-primary'>ユーザー詳細情報</h1><br>
+  <div class='row'>
+    <div class='col-10 offset-1'>
+      <%= render 'users/users/show', user:@user %><br>
+
+      <h2 class='my-4 border-bottom border-warning text-center'>管理家電一覧</h2>
+      <%= render 'admins/electronics/list', electronics:@electronics %><br>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-10 offset-1'>
+      <h1 class='my-4 border-bottom border-success'>お知らせ編集</h1>
+      <%= form_for(@notice, url: admins_notice_path(@notice.id)) do |f| %>
+      <%= render 'layouts/error_messages', obj:@notice %>
+      <%= render 'form', notice:@notice, f:f %><br>
+      <% end %>
+    </div>
+  </div>
+</div>
