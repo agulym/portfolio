@@ -1,0 +1,2 @@
+module Users::ElectronicsHelper
+end
